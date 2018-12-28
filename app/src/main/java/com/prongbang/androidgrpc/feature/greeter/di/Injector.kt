@@ -10,7 +10,7 @@ object Injector {
 
     // Provide GrpcService
     fun provideGrpcService() = GrpcService(
-        "172.20.10.5",
+        "IP SERVER",
         50051
     )
 
