@@ -17,3 +17,14 @@ object Injector {
     )
 }
 ```
+
+### gRPC server
+
+[gRPC server](https://github.com/prongbang/android-grpc/tree/master/grpcserver)
+
+- Run
+
+```
+cd grpcserver
+go run main.go
+```
