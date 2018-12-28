@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+// The java definition
+option java_multiple_files = true;
+option java_package = "io.prongbang.grpc";
+option java_outer_classname = "HelloWorldProto";
+
+// The objc definition
+option objc_class_prefix = "HLW";
+
+package helloworld;
+
+// The greeting service definition.
+service Greeter {
+    // Sends a greeting
+    rpc SayHello(HelloRequest) returns (HelloResponse) {}
+
+    // Sends another greeting
+    rpc SayHelloAgain (HelloRequest) returns (HelloResponse) {}
+}
+
+// The request message containing the user's name
+message HelloRequest {
+    string name = 1;    // ระบุ tag ที่ไม่ให้ซ้ำกันเพื่อใช้ในการทำ binary endcode
+}
+
+// The response message cotaining the gretting
+message HelloResponse {
+    string message = 1; // ระบุ tag ที่ไม่ให้ซ้ำกันเพื่อใช้ในการทำ binary endcode
+}
